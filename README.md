@@ -1,8 +1,6 @@
 # Dry::Templates
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/dry/templates`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+The purpose of this gem is to add dry-transaction generators to your rails app.
+Generated transactions follow the principle of CRUD, which means that for create, read, update, delete and index actions separate transactions are generated.
 
 ## Installation
 
@@ -21,8 +19,43 @@ Or install it yourself as:
     $ gem install dry-templates
 
 ## Usage
+Creates transaction for CRUD actions
 
-TODO: Write usage instructions here
+Example:
+<br/>
+`$ bin/rails generate dry:templates:transactions init`
+
+This will create:
+```
+|- app
+    |- transactions
+    |- application_transaction.rb
+```
+`$ bin/rails generate dry:templates:transactions users`
+
+This will create:
+```
+|- app
+    |- transactions
+    |- application_transaction.rb
+    |- users
+        |- create.rb
+        |- update.rb
+        |- fetch.rb
+        |- destroy.rb
+        |- index.rb
+```
+`$ bin/rails generate dry:templates:transactions users create update`
+
+This will create:
+```
+|- app
+    |- transactions
+    |- application_transaction.rb
+    |- users
+        |- create.rb
+        |- update.rb
+```
 
 ## Development
 
@@ -32,7 +65,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/dry-templates. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/michudzik/dry-templates. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 

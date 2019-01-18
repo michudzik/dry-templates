@@ -1,15 +1,15 @@
 Description:
-  Creates the application_transaction file for you.
+  Creates transaction for CRUD actions
 
 Example:
-  $ bin/rails generate transactions init
+  $ bin/rails generate dry:templates:transactions init
 
   This will create:
     |- app
       |- transactions
         |- application_transaction.rb
 
-  $ bin/rails generate transactions users
+  $ bin/rails generate dry:templates:transactions users
 
   This will create:
     |- app
@@ -22,7 +22,7 @@ Example:
           |- destroy.rb
           |- index.rb
 
-  $ bin/rails generate transactions users create update
+  $ bin/rails generate dry:templates:transactions users create update
 
   This will create:
     |- app
