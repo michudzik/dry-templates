@@ -9,3 +9,11 @@
 
 # rspec failure tracking
 .rspec_status
+tmp
+*.gem
+Gemfile.lock
+.DS_Store
+/.ruby-gemset
+/.ruby-version
+bundle
+.bundle
