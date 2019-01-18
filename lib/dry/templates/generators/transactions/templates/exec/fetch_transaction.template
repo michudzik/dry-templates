@@ -1,0 +1,11 @@
+module <%= model.pluralize.camelcase %>
+  class Fetch < ApplicationTransaction
+    try :find, catch: ActiveRecord::RecordNotFound
+
+    private
+
+    def find(id)
+      <%= model.singularize.camelcase %>.find(id)
+    end
+  end
+end

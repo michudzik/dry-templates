@@ -1,0 +1,11 @@
+module <%= model.pluralize.camelcase %>
+  class Index < ApplicationTransaction
+    try :fetch_all_<%= model.pluralize.underscore %>, catch: ActiveRecord::ActiveRecordError
+
+    private
+
+    def fetch_all_<%= model.pluralize.underscore %>
+      <%= model.singularize.camelcase %>.all
+    end
+  end
+end

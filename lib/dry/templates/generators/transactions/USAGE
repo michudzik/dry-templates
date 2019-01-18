@@ -1,0 +1,33 @@
+Description:
+  Creates the application_transaction file for you.
+
+Example:
+  $ bin/rails generate transactions init
+
+  This will create:
+    |- app
+      |- transactions
+        |- application_transaction.rb
+
+  $ bin/rails generate transactions users
+
+  This will create:
+    |- app
+      |- transactions
+        |- application_transaction.rb
+        |- users
+          |- create.rb
+          |- update.rb
+          |- fetch.rb
+          |- destroy.rb
+          |- index.rb
+
+  $ bin/rails generate transactions users create update
+
+  This will create:
+    |- app
+      |- transactions
+        |- application_transaction.rb
+        |- users
+          |- create.rb
+          |- update.rb
