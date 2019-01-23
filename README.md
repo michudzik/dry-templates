@@ -1,4 +1,4 @@
-# Dry::Templates
+# Dry::Templates [![Build Status](https://travis-ci.org/michudzik/dry-templates.svg?branch=master)](https://travis-ci.org/michudzik/dry-templates)
 The purpose of this gem is to add dry-transaction generators to your rails app.
 Generated transactions follow the principle of CRUD, which means that for create, read, update, delete and index actions separate transactions are generated.
 
