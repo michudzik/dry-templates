@@ -123,6 +123,7 @@ RSpec.describe Dry::Templates::Generators::TransactionsGenerator, type: :generat
       it 'implements proper methods' do
         is_expected.to have_method :find
         is_expected.to have_method :update_attributes
+        is_expected.to have_method :validate
         is_expected.to have_method :save
       end
 
