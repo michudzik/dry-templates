@@ -1,5 +1,16 @@
-require "bundler/setup"
-require "dry/templates"
+require 'bundler/setup'
+require 'dry/templates'
+require 'rails/all'
+
+ActiveRecord::Base.establish_connection :adapter => "sqlite3", :database => ":memory:"
+
+module TestApp
+  class Application < Rails::Application
+    config.root = File.dirname(__FILE__)
+  end
+end
+
+require 'ammeter/init'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
